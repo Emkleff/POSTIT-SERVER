@@ -20,6 +20,12 @@ const registerUser = async (req, res) => {
   }
 };
 
+const getUser = async (req, res) => {
+    const { username } = req.user
+    res.status(200).json({ success: true, username})
+    // res.send( 'user name')
+};
+
 const loginUser = async (req, res) => {
   // res.send('login user')
   const { email, password } = req.body;
@@ -50,4 +56,4 @@ const loginUser = async (req, res) => {
   }
 };
 
-module.exports = { registerUser, loginUser };
+module.exports = { registerUser, loginUser, getUser };
