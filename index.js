@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(cors());
 //routes
 app.get('/', (req, res) => {
-  res.setEncoding('WELCOME TO POST IT API');
+  res.send('WELCOME TO POST IT API');
 });
 app.use("/api", authRouter);
 app.use("/api", auth, storyRouter);
